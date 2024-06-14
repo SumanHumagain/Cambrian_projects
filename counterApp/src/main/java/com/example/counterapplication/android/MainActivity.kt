@@ -54,5 +54,22 @@ fun CounterApp() {
     ) {
         Text(text = "Counter: $counter")
 
+        Row {
+            Button(
+                onClick = { counter = ((counter.toIntOrNull() ?: 0) + 1).toString()},
+                modifier = Modifier.padding(4.dp)
+            ) {
+                Text(text = "Increment")
+            }
+
+            Button(
+                onClick = { counter = ((counter.toIntOrNull() ?: 0) - 1).toString()},
+                modifier = Modifier.padding(4.dp)
+            ) {
+                Text(text = "Decrement")
+            }
+
+        }
+
     }
 }
