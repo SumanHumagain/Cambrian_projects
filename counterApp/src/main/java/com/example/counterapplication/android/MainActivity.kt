@@ -62,6 +62,8 @@ fun CounterApp() {
                 Text(text = "Increment")
             }
 
+            Box(modifier = Modifier.height(20.dp))
+
             Button(
                 onClick = { counter = ((counter.toIntOrNull() ?: 0) - 1).toString()},
                 modifier = Modifier.padding(4.dp)
